@@ -3,9 +3,10 @@ import Image
 __author__ = 'daniel'
 
 
-def main():
+def mergeReport():
     size = width, height = 950, 1500
     area1 = (0, 0, 736, 862)
+    area2 = (0, 862, 950, 638+862)
 
     image = Image.new("RGB", size, "white")
 
@@ -13,11 +14,8 @@ def main():
     slip2 = Image.open('img/testout2.jpg')
 
     image.paste(slip1, area1)
+    image.paste(slip2, area2)
 
-    image.show()
+    image.save('img/report.jpg')
 
     del image, slip1, slip2
-
-
-if __name__ == "__main__":
-    main()
