@@ -1,9 +1,11 @@
+import PythonMagick
+
 __author__ = 'daniel'
 
 
-def main():
-    print 'Hello world'
-
-
-if __name__ == "__main__":
-    main()
+def pdf2jpg():
+    pdf = 'pdf/1.pdf'
+    p = PythonMagick.Image()
+    p.density('200')
+    p.read(pdf)
+    p.write('img/test1.jpg')
