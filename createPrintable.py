@@ -1,5 +1,5 @@
 from pdf2jpg import pdf2jpg
-from cropJPG import cropJPG
+from cropReport import cropJPG
 from mergeReport import mergeReport
 from jpg2docx import jpg2docx
 
