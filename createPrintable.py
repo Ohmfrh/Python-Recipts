@@ -2,6 +2,7 @@ from pdf2jpg import pdf2jpg
 from cropReport import *
 from mergeReport import mergeReport
 from jpg2docx import jpg2docx
+from directoryAccess import cleanup
 
 __author__ = 'daniel'
 
@@ -16,6 +17,7 @@ def main():
     cropRw(box3, 'tmp/testout2.jpg')
     mergeReport()
     jpg2docx()
+    cleanup()
 
     print "DONE"
 
