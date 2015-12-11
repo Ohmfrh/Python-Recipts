@@ -4,15 +4,17 @@ from docx.shared import Mm
 __author__ = 'daniel'
 
 document = Document()
-section = document.sections
+sections = document.sections
+section = sections[0]
 
 section.page_width = Mm(80)
 section.page_height = Mm(297)
+section.top_margin = Mm(0)
+section.bottom_margin = Mm(0)
+section.left_margin = Mm(0)
+section.right_margin = Mm(0)
 
-
-paragraph = document.add_paragraph('Lorem ipsum dolor sit amet.')
-document.add_heading('The REAL meaning of the universe')
-document.add_heading('The role of dolphins', level=2)
+document.add_picture('img/testReport.jpg', width=Mm(80))
 
 
 document.save('test.docx')
