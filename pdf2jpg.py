@@ -8,4 +8,4 @@ def pdf2jpg():
     p = PythonMagick.Image()
     p.density('200')
     p.read(pdf)
-    p.write('img/test1.jpg')
+    p.write('tmp/test1.jpg')
