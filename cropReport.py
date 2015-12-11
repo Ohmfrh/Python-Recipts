@@ -19,11 +19,11 @@ def cropRw(box, img):
     white_block = Image.new("RGB", size, "white")
 
     image_crop = image.crop(box)
-    image_crop.save('img/testCrop.jpg')
+    image_crop.save('tmp/testCrop.jpg')
 
     image.paste(white_block, (0, 90, 475, 310))
     image.paste(image_crop, (70, 90, 545, 300))
 
-    image.save('img/testout2.jpg')
+    image.save('tmp/testout2.jpg')
 
     del image, image_crop, white_block

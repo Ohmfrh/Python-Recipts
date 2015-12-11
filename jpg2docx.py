@@ -15,6 +15,6 @@ def jpg2docx():
     section.left_margin = Mm(0)
     section.right_margin = Mm(0)
 
-    document.add_picture('img/testReport.jpg', width=Mm(80))
+    document.add_picture('tmp/testReport.jpg', width=Mm(80))
 
     document.save('test.docx')

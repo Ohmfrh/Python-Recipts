@@ -11,9 +11,9 @@ def main():
     box3 = (0, 90, 475, 300)
 
     pdf2jpg()
-    cropJPG(box1, 'img/test1.jpg', 'img/testout1.jpg')
-    cropJPG(box2, 'img/test1.jpg', 'img/testout2.jpg')
-    cropRw(box3, 'img/testout2.jpg')
+    cropJPG(box1, 'tmp/test1.jpg', 'tmp/testout1.jpg')
+    cropJPG(box2, 'tmp/test1.jpg', 'tmp/testout2.jpg')
+    cropRw(box3, 'tmp/testout2.jpg')
     mergeReport()
     jpg2docx()
 
