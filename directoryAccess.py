@@ -3,7 +3,7 @@ import os
 __author__ = 'daniel'
 
 def cleanup():
-    folder = '/path/to/folder'
+    folder = 'tmp/'
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)
         try:
