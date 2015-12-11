@@ -3,17 +3,27 @@ import Image
 __author__ = 'daniel'
 
 
-def cropJPG():
-    box1 = (0, 0, 736, 862)
-    box2 = (750, 462, 1700, 1100)
-    filename = "img/test1.jpg"
+def cropJPG(box, img, out):
+    image = Image.open(img)
 
-    image = Image.open(filename)
+    image_crop = image.crop(box)
+    image_crop.save(out)
 
-    image_crop1 = image.crop(box1)
-    image_crop2 = image.crop(box2)
+    del image, image_crop
 
-    image_crop1.save('img/testout1.jpg')
-    image_crop2.save('img/testout2.jpg')
 
-    del image, image_crop1
+def cropRw(box, img):
+    size = (475, 220)
+    image = Image.open(img)
+    # new_image = image
+    white_block = Image.new("RGB", size, "white")
+
+    image_crop = image.crop(box)
+    image_crop.save('img/testCrop.jpg')
+
+    image.paste(white_block, (0, 90, 475, 310))
+    image.paste(image_crop, (70, 90, 545, 300))
+
+    image.save('img/testout2.jpg')
+
+    del image, image_crop, white_block
