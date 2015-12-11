@@ -10,12 +10,12 @@ def mergeReport():
 
     image = Image.new("RGB", size, "white")
 
-    slip1 = Image.open('img/testout1.jpg')
-    slip2 = Image.open('img/testout2.jpg')
+    slip1 = Image.open('tmp/testout1.jpg')
+    slip2 = Image.open('tmp/testout2.jpg')
 
     image.paste(slip1, area1)
     image.paste(slip2, area2)
 
-    image.save('img/testReport.jpg')
+    image.save('tmp/testReport.jpg')
 
     del image, slip1, slip2
