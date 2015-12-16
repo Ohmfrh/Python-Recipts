@@ -12,3 +12,7 @@ def cleanup():
             #elif os.path.isdir(file_path): shutil.rmtree(file_path)
         except Exception, e:
             print e
+
+def getPDF(folder):
+    files = os.listdir(folder)
+    return files
