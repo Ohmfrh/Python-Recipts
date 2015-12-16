@@ -3,7 +3,7 @@ from docx.shared import Mm
 
 __author__ = 'daniel'
 
-def jpg2docx():
+def jpg2docx(doc_name):
     document = Document()
     sections = document.sections
     section = sections[0]
@@ -17,4 +17,4 @@ def jpg2docx():
 
     document.add_picture('tmp/testReport.jpg', width=Mm(80))
 
-    document.save('test.docx')
+    document.save(doc_name)
