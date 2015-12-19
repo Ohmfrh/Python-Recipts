@@ -12,8 +12,12 @@ def main():
     box2 = (750, 462, 1700, 1100)
     box3 = (0, 90, 475, 300)
     folder = 'guide/'
+    i = 1.0
+    total_files = 0
 
     files = getPDF(folder)
+
+    total_files = len(files)
 
     for fil in files:
         doc_name = fil.split('.')
@@ -24,8 +28,9 @@ def main():
         mergeReport()
         jpg2docx('print/' + doc_name[0] + '.docx')
         cleanup()
+        print repr((i/total_files)*100) + "%"
+        i += 1
 
-    print "DONE"
 
 
 if __name__ == "__main__":
