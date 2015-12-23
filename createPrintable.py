@@ -15,9 +15,9 @@ def main():
 
     files = getPDF(folder)
 
-    for fil in files:
-        doc_name = fil.split('.')
-        pdf2jpg(os.path.join(folder, fil))
+    for file in files:
+        doc_name = file.split('.')
+        pdf2jpg(os.path.join(folder, file))
         cropJPG(box1, 'tmp/test1.jpg', 'tmp/testout1.jpg')
         cropJPG(box2, 'tmp/test1.jpg', 'tmp/testout2.jpg')
         cropRw(box3, 'tmp/testout2.jpg')
