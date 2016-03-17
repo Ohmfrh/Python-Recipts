@@ -22,7 +22,7 @@ def cropRw(box, img):
     image_crop.save('tmp/testCrop.jpg')
 
     image.paste(white_block, (0, 90, 475, 310))
-    image.paste(image_crop, (70, 90, 545, 300))
+    image.paste(image_crop, (70, 90, 575, 300))
 
     image.save('tmp/testout2.jpg')
 
