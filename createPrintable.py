@@ -3,6 +3,7 @@ from cropReport import *
 from mergeReport import mergeReport
 from jpg2docx import jpg2docx
 from directoryAccess import *
+import time
 
 __author__ = 'daniel'
 
@@ -14,6 +15,7 @@ def main():
     folder = 'guide/'
     i = 1.0
     total_files = 0
+    current_time = time.strftime("%d_%m_%Y")
 
     files = getPDF(folder)
 
@@ -26,11 +28,10 @@ def main():
         cropJPG(box2, 'tmp/test1.jpg', 'tmp/testout2.jpg')
         cropRw(box3, 'tmp/testout2.jpg')
         mergeReport()
-        jpg2docx('print/' + doc_name[0] + '.docx')
+        jpg2docx('print/' + current_time + '_' + doc_name[0] + '.docx')
         cleanup()
         print repr((i/total_files)*100) + "%"
         i += 1
-
 
 
 if __name__ == "__main__":
