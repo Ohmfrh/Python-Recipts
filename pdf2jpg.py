@@ -13,5 +13,5 @@ def pdf2jpg(pdf):
 def pdf2jpgDHL(pdf):
     p = PythonMagick.Image()
     p.density('200')
-    p.pread(pdf)
+    p.read(pdf)
     p.write('tmp/dhlimg.jpg')
