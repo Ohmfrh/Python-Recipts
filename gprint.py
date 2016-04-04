@@ -9,6 +9,13 @@ __author__ = 'daniel'
 
 
 def main():
+    fedex()
+
+
+if __name__ == "__main__":
+    main()
+
+def fedex():
     box1 = (0, 0, 736, 862)
     box2 = (750, 462, 1700, 1100)
     box3 = (0, 90, 505, 300)
@@ -32,7 +39,3 @@ def main():
         cleanup()
         print repr((i/total_files)*100) + "%"
         i += 1
-
-
-if __name__ == "__main__":
-    main()
