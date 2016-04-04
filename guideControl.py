@@ -6,8 +6,7 @@ from directoryAccess import *
 import time
 
 
-
-def test():
+def fedex():
     box1 = (0, 0, 736, 862)
     box2 = (750, 462, 1700, 1100)
     box3 = (0, 90, 505, 300)

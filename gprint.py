@@ -5,7 +5,7 @@ __author__ = 'daniel'
 
 
 def main():
-    test()
+    fedex()
 
 
 if __name__ == "__main__":
